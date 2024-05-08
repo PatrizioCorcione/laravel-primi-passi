@@ -22,7 +22,22 @@ Route::get('/Su-di-noi', function () {
     return view('about-us', compact('origin', 'founder'));
 })->name('about-us');
 Route::get('/sponsor', function () {
-    $origin = 'lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum';
-    $founder = 'Piccio Pasticcio';
-    return view('sponsor', compact('origin', 'founder'));
+    $data = [
+        (object) [
+            'name' => 'strozzini',
+            'logo' => 'io sono un immagine',
+            'time' => '3 year'
+        ],
+        (object) [
+            'name' => 'creativi',
+            'logo' => 'io sono un immagine',
+            'time' => '5 year'
+        ],
+        (object) [
+            'name' => 'diversi',
+            'logo' => 'io sono un immagine',
+            'time' => '1 year'
+        ],
+    ];
+    return view('sponsor', ['data' => $data]);
 })->name('sponsor');
