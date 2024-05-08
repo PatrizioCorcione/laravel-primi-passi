@@ -14,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', ['title' => 'Benvenuti', 'description' => 'lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum']);
 });
+Route::get('/Su-di-noi', function () {
+    $origin = 'lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum';
+    $founder = 'Piccio Pasticcio';
+    return view('about-us', compact('origin', 'founder'));
+})->name('about-us');
+Route::get('/sponsor', function () {
+    $origin = 'lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum';
+    $founder = 'Piccio Pasticcio';
+    return view('sponsor', compact('origin', 'founder'));
+})->name('sponsor');
