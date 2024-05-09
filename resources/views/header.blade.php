@@ -5,13 +5,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href='/'>Home</a>
+                        <a class="nav-link active" aria-current="page" href={{ route('home') }}>Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href='sponsor'>Sponsor</a>
+                        <a class="nav-link" href={{ route('sponsor') }}>Sponsor</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href='Su-di-noi'>About us</a>
+                        <a class="nav-link" href={{ route('about-us') }}>About us</a>
                     </li>
                 </ul>
             </div>
